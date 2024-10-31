@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="explore.css">
    
 </head>
-<body>
+<body class="position-relative " style="height: 800px;">
 
     <!-- ----------------navbar section---------------- -->
 
     <section> 
         <div class="d-flex justify-content-around mt-3"  >
-            <button type="button" class="btn btn-primary mt-2">Add task+</button>
+            <button type="button" class="btn btn-primary mt-2" id="monbouton">Add task+</button>
              
             <nav class="navbar ">
                 <div class="container"  >
@@ -118,40 +118,47 @@
 
 
 <!-- --------------------------------------le modal------------------------ -->
-    <!-- <section class="mt-5">
-      
-        <div class="w-50 border p-3 mx-auto bg-danger-subtle rounded-3">
-            <h1 class="text-center">
-                Add task
-            </h1>
-            <form action="" method="post" class="d-flex flex-column bg-transparent flex-1 gap-2">
-                <label for="titre">Titre</label>
-                <input type="text" placeholder="titre" class="bg-transparent rounded-2">
-
-                <label for="titre">description</label>
-                <textarea name="description" id="description" rows="3" class="bg-transparent rounded-2">
-                </textarea>
-
-                <label for="date" >date</label>
-                <input type="date" class="bg-transparent rounded-2">
-                 
-                <select name="type" id="type" class="bg-transparent rounded-2">
-                    <option value="todo">To Do</option>
-                    <option value="doing">Doing</option>
-                    <option value="done">Done</option>
-                </select>
-
-                <select name="priority" id="priority" class="bg-transparent rounded-2">
-                    <option value="P1">P1</option>
-                    <option value="p2">P2</option>
-                    <option value="p3">P3</option>
-                </select>
-
-            </form>
+    <section class=" position-fixed top-0 w-100 h-100" id="modal" >
+        <div class="bg-black p-2 text-dark bg-opacity-75  h-100">
+            <div class="w-50 border p-3 mx-auto bg-danger-subtle rounded-3 mt-5">
+                <h1 class="text-center">
+                    Add task
+                </h1>
+                <form action="" method="post" class="d-flex flex-column bg-transparent flex-1 gap-2">
+                    <label for="titre">Titre</label>
+                    <input type="text" placeholder="titre" class="bg-transparent rounded-2">
+    
+                    <label for="titre">description</label>
+                    <textarea name="description" id="description" rows="3" class="bg-transparent rounded-2">
+                    </textarea>
+    
+                    <label for="date" >date</label>
+                    <input type="date" class="bg-transparent rounded-2">
+                     
+                    <select name="type" id="type" class="bg-transparent rounded-2">
+                        <option value="todo">To Do</option>
+                        <option value="doing">Doing</option>
+                        <option value="done">Done</option>
+                    </select>
+    
+                    <select name="priority" id="priority" class="bg-transparent rounded-2">
+                        <option value="P1">P1</option>
+                        <option value="p2">P2</option>
+                        <option value="p3">P3</option>
+                    </select>
+                    <button  class="btn btn-primary bg-danger border-none">
+submit
+                    </button>
+    
+                </form>
+            </div>
         </div>
+      
+       
 
-    </section> -->
+    </section>
 
     <!-- -----------------fin du modal------------------------ -->
+    <script src="index.js"></script> 
 </body>
 </html>
