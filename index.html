@@ -118,7 +118,7 @@
 
 
 <!-- --------------------------------------le modal------------------------ -->
-    <section class=" position-fixed top-0 w-100 h-100" id="modal" >
+    <section class=" position-fixed top-0 w-100 h-100" id="modal" style="display: none;" >
         <div class="bg-black p-2 text-dark bg-opacity-75  h-100">
             <div class="w-50 border p-3 mx-auto bg-danger-subtle rounded-3 mt-5">
                 <h1 class="text-center">
@@ -146,9 +146,10 @@
                         <option value="p2">P2</option>
                         <option value="p3">P3</option>
                     </select>
-                    <button  class="btn btn-primary bg-danger border-none">
-submit
-                    </button>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary me-md-2 bg-success" type="button" id="submit">Submit</button>
+                        <button class="btn btn-primary bg-danger" type="button" id="exit">Exit</button>
+                      </div>
     
                 </form>
             </div>

@@ -1,18 +1,14 @@
-const bouton = document.getElementById("monbouton");
-const section = document.getElementById("modal");
+const boutonadd = document.getElementById("monbouton");
+const sectionadd = document.getElementById("modal");
+const exitbouton = document.getElementById("exit");
 
-bouton.addEventListener("click",function(){
-
-if(section.style.display === "none"){
-section.style.display = "block";
-
+boutonadd.onclick = function displaysectionadd(){
+sectionadd.style.display = 'block';
 }
-else{
-section.style.display= "none";
 
-bouton.textContent = "Afficher la section"; 
+exitbouton.onclick = function displaysectionadd(){
 
-
+  sectionadd.style.display="none"  ;
 }
 
 
@@ -21,4 +17,4 @@ bouton.textContent = "Afficher la section";
 
 
 
-})
+
