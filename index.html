@@ -19,12 +19,12 @@
             <nav class="navbar ">
                 <div class="container"  >
                   <form class="d-flex " role="search"  >
-                    <input class="form-control me-2 search-item " type="search" placeholder="Search" aria-label="Search" >
+                    <input id="search" class="form-control me-2 search-item " type="search" placeholder="Search" aria-label="Search" >
                   </form>
                 </div>
               </nav>
 
-            <button type="button" class="btn btn-primary mt-2"  >Add Multiple</button>
+            <button id="multiple-btn" type="button" class="btn btn-primary mt-2"  >Add Multiple</button>
         </div>
 
     </section>
@@ -41,13 +41,10 @@
               <p class="fs-5">1</p>
             </div>
 
-            <div class=" tasks-container  mt-2 border-start border-danger border-5 mt-3 w-75">
+            <div class=" tasks-container  mt-2 border-start border-danger border-5 mt-3 w-75" id="to-do-container" >
                 <div class="border border-danger">
                     <div class="task px-4 py-2 w-100">
-                        <p>
-                            your task
-                        </p>
-                        <p>12/05/2024</p>
+                        <div id="containeradd"></div>
                         <button type="button" class="btn btn-danger btn-sm">Delet</button>
                             <button type="button" class="btn btn-warning btn-sm">Edit</button>
                   </div>
@@ -121,19 +118,19 @@
     <section class=" position-fixed top-0 w-100 h-100" id="modal" style="display: none;" >
         <div class="bg-black p-2 text-dark bg-opacity-75  h-100">
             <div class="w-50 border p-3 mx-auto bg-danger-subtle rounded-3 mt-5">
-                <h1 class="text-center">
+                <h1 class="text-center" >
                     Add task
                 </h1>
                 <form action="" method="post" class="d-flex flex-column bg-transparent flex-1 gap-2">
                     <label for="titre">Titre</label>
-                    <input type="text" placeholder="titre" class="bg-transparent rounded-2">
+                    <input id="titleinput" type="text" placeholder="titre" class="bg-transparent rounded-2">
     
                     <label for="titre">description</label>
-                    <textarea name="description" id="description" rows="3" class="bg-transparent rounded-2">
+                    <textarea name="description" id="descriptioninput" rows="3" class="bg-transparent rounded-2">
                     </textarea>
     
                     <label for="date" >date</label>
-                    <input type="date" class="bg-transparent rounded-2">
+                    <input id="dateinput" type="date" class="bg-transparent rounded-2">
                      
                     <select name="type" id="type" class="bg-transparent rounded-2">
                         <option value="todo">To Do</option>
@@ -147,7 +144,7 @@
                         <option value="p3">P3</option>
                     </select>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary me-md-2 bg-success" type="button" id="submit">Submit</button>
+                        <button class="btn btn-primary me-md-2 bg-success" type="button" id="submit"   >Submit</button>
                         <button class="btn btn-primary bg-danger" type="button" id="exit">Exit</button>
                       </div>
     
