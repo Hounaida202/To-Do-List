@@ -38,7 +38,7 @@ let tableaustocker3=[];
   priority:priority.value,
       }
       tableaustocker1.push(object1);
-  
+
                            } 
 
  // on veut ajouter le task dans to do :    
@@ -48,23 +48,23 @@ let tableaustocker3=[];
 
   for (let i = 0; i < tableaustocker1.length; i++) {
 
-      let borderColorClass1 = "";
+      let bordercolor1 = "";
       if (tableaustocker1[i].priority === "P1") {
-          borderColorClass1 = "border-danger"; 
+          bordercolor1 = "border-danger"; 
       } else if (tableaustocker1[i].priority === "P2") {
-          borderColorClass1 = "border-primary"; 
+          bordercolor1 = "border-warning"; 
       } else {
-          borderColorClass1 = "border-warning"; 
+          bordercolor1 = "border-success"; 
       }
 
       table1 += `
-          <div class="tasks-container mt-2 border mt-3 w-75 ${borderColorClass1}">
-              <div id="color">
+          <div class="tasks-container mt-2 border border-4 mt-3 w-75 ${bordercolor1}">
+              <div class="bg-success-subtle">
                   <div class="task px-4 py-2 w-100">
                       <h3>${tableaustocker1[i].title}</h3>
                       <p>${tableaustocker1[i].description}</p>
                       <p>${tableaustocker1[i].date}</p>
-                      <button type="button" class="btn btn-danger btn-sm" onclick="removeTask(1, ${i})">Delete</button>
+                      <button type="button" class="btn btn-danger btn-sm" onclick="removetask(1, ${i})">Delete</button>
                       <button type="button" class="btn btn-warning btn-sm">Edit</button>
                   </div>
               </div>
@@ -79,6 +79,7 @@ function modal1(){
   stocker1();
   afficher1();
 }
+
 
 // ------------------une fonction pour la section to do-------------------------
 
@@ -105,23 +106,23 @@ function modal1(){
 
   for (let i = 0; i < tableaustocker2.length; i++) {
 
-      let borderColorClass2 = "";
+      let bordercolor2 = "";
       if (tableaustocker2[i].priority === "P1") {
-          borderColorClass2 = "border-danger"; 
+          bordercolor2 = "border-danger "; 
       } else if (tableaustocker2[i].priority === "P2") {
-          borderColorClass2 = "border-primary"; 
+          bordercolor2 = "border-warning "; 
       } else {
-          borderColorClass2 = "border-warning"; 
+          bordercolor2 = "border-success "; 
       }
 
       table2 += `
-          <div class="tasks-container mt-2 border mt-3 w-75 ${borderColorClass2}">
-              <div id="color">
+          <div class="tasks-container mt-2 border border-4 mt-3 w-75 ${bordercolor2}">
+              <div class="bg-success-subtle">
                   <div class="task px-4 py-2 w-100">
                       <h3>${tableaustocker2[i].title}</h3>
                       <p>${tableaustocker2[i].description}</p>
                       <p>${tableaustocker2[i].date}</p>
-                      <button type="button" class="btn btn-danger btn-sm" onclick="removeTask(2, ${i})">Delete</button>
+                      <button type="button" class="btn btn-danger btn-sm" onclick="removetask(2, ${i})">Delete</button>
                       <button type="button" class="btn btn-warning btn-sm">Edit</button>
                   </div>
               </div>
@@ -162,23 +163,23 @@ function stocker3(){
 
   for (let i = 0; i < tableaustocker3.length; i++) {
 
-      let borderColorClass3 = "";
+      let bordercolor3 = "";
       if (tableaustocker3[i].priority === "P1") {
-          borderColorClass3 = "border-danger"; 
+          bordercolor3 = "border-danger "; 
       } else if (tableaustocker3[i].priority === "P2") {
-          borderColorClass3 = "border-primary"; 
+          bordercolor3 = "border-warning"; 
       } else {
-          borderColorClass3= "border-warning"; 
+          bordercolor3= "border-success "; 
       }
 
       table3 += `
-          <div class="tasks-container mt-2 border mt-3 w-75 ${borderColorClass3}">
-              <div id="color">
+          <div class="tasks-container mt-2 border border-4 mt-3 w-75 ${bordercolor3}">
+              <div class="bg-success-subtle">
                   <div class="task px-4 py-2 w-100">
                       <h3>${tableaustocker3[i].title}</h3>
                       <p>${tableaustocker3[i].description}</p>
                       <p>${tableaustocker3[i].date}</p>
-                      <button type="button" class="btn btn-danger btn-sm" onclick="removeTask(3, ${i})">Delete</button>
+                      <button type="button" class="btn btn-danger btn-sm" onclick="removetask(3, ${i})">Delete</button>
                       <button type="button" class="btn btn-warning btn-sm">Edit</button>
                   </div>
               </div>
@@ -196,7 +197,7 @@ function modal3(){
 
 //-----------------------------------------------------------------------------------------------
 
-function removeTask(section, index) {
+function removetask(section, index) {
   if (section === 1) {
       tableaustocker1.splice(index, 1); 
       afficher1();
