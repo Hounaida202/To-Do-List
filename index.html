@@ -9,14 +9,14 @@
    
 
 </head>
-<body class="position-relative " style="height: 800px;
+<body id="body" class="position-relative " style="height: 800px;
 background-image: url( background.png);
 background-size: cover;">
 
     <!-- ----------------navbar section---------------- -->
 
     <section> 
-        <div class="d-flex justify-content-around mt-3"  >
+        <div id="navbar"  class="d-flex justify-content-around mt-3"  >
             <button type="button" class="btn btn-primary mt-2" id="monbouton">Add task+</button>
              
             <nav class="navbar ">
@@ -34,13 +34,12 @@ background-size: cover;">
 
     <!-- ---------------fin navbar---------------------------- -->
 
-    <section class="d-flex justify-content-around mt-5 ">
+    <section id="section-container" class="d-flex justify-content-around mt-5 ">
 
  <!-- -------to do--------------     -->
     <div class="  w-25">
            <div class="d-flex border-bottom border-black border-4  gap-3 w-75">
               <h4 class="">To do</h4>
-              <div class="border-start border-black mb-3 "></div>
             </div>
 <div id="container1"></div>
 
@@ -51,7 +50,6 @@ background-size: cover;">
 <div class=" w-25 ">
     <div class="d-flex border-bottom border-black border-4  gap-3 w-75">
      <h4 class="">In Progress</h4>
-     <div class="border-start border-black mb-3"></div>
      </div>
      
      <div id="container2">

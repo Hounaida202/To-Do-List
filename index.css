@@ -1,3 +1,47 @@
 
+@media (max-width: 767px) {
+ 
 
 
+#navbar{
+
+display: flex;
+
+}
+#multiple-btn{
+    display: none;
+}
+
+#monbouton{
+
+ width: 25%;   
+ margin-left: 2rem;
+
+}
+
+#section-container {
+
+    display: flex;
+    flex-direction: column;
+   gap: 9rem;
+   margin-left: 3rem;
+   
+
+}
+#container1{
+
+width: 400%;
+
+}
+#container2{
+
+    width: 400%;
+  
+}
+#container3{
+
+    width: 400%;
+  
+}
+
+}
